@@ -3,6 +3,16 @@
 <label> Book Title  </label>
 <%= @book.book_title %>
 <br>
+<br>
+
+<label> Authors </label>
+<br>
+<% @book.authors.each do |author| %>
+  <%= author.name %>
+  <br>
+<% end %>
+<br>
+<br>
 
 <%= link_to 'Edit', edit_book_path(@book) %> |
 <%= link_to 'Back', books_path %>
